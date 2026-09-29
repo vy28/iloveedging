@@ -1,0 +1,73 @@
+Screen {
+    background: #0c1016;
+    color: #e0e7ef;
+}
+EdgeTerminal > Screen { padding: 0 2; }
+#masthead { height: 3; padding: 1 0 0 0; }
+#brand { width: 1fr; }
+#connection { width: 22; content-align: right middle; }
+#intro { height: 3; align: left middle; }
+#headline { width: 1fr; text-style: bold; color: #eaf0f6; }
+#read-only { width: 40; color: #748298; content-align: right top; }
+#metrics { height: 5; margin-bottom: 1; }
+.metric { width: 1fr; height: 5; background: #141b25; border-left: wide #283545; padding: 1 2; margin-right: 1; }
+#metric-best { margin-right: 0; border-left: wide #c8ff79; }
+Tabs { height: 3; background: #0c1016; }
+Tab { color: #8b97a8; padding: 0 2; }
+Tab.-active { color: #c8ff79; text-style: bold; }
+Underline > .underline--bar { color: #c8ff79; background: #0c1016; }
+#toolbar { height: 3; margin: 1 0; }
+Input { background: #141b25; border: tall #283545; color: #e0e7ef; }
+Input:focus { border: tall #7edce5; }
+#search { width: 1fr; margin-right: 1; }
+Button { min-width: 12; background: #1b2532; color: #aab8c9; border: none; height: 3; }
+Button:hover { background: #283545; color: #eaf0f6; }
+Button:focus { text-style: bold; background: #283545; }
+Button.-primary { background: #c8ff79; color: #0c1016; }
+#probability { width: 18; margin-right: 1; }
+#probability.filter-on { background: #233526; color: #c8ff79; }
+#sort { width: 16; }
+#workspace { height: 1fr; min-height: 5; }
+#market-panel { width: 1fr; border: round #283545; background: #10161f; }
+#list-heading, .section-label { height: 2; color: #9cabbc; padding: 0 1; }
+#list-heading { border-bottom: solid #283545; }
+DataTable { height: 1fr; background: #10161f; scrollbar-color: #3a4b5f; scrollbar-background: #10161f; }
+DataTable > .datatable--header { background: #1b2532; color: #8b97a8; text-style: bold; }
+DataTable > .datatable--odd-row { background: #121b26; }
+DataTable > .datatable--even-row { background: #10161f; }
+DataTable > .datatable--cursor { background: #293d35; color: #efffe8; text-style: bold; }
+DataTable > .datatable--hover { background: #24303e; }
+#empty { height: 1fr; padding: 3 3; color: #8b97a8; }
+#table-hint { height: 1; padding: 0 1; color: #748298; background: #141b25; }
+#inspector { width: 43; border: round #3c5048; background: #131c22; margin-left: 1; padding: 0 1; scrollbar-size: 1 1; }
+#details { padding: 1 0; height: auto; }
+#status { height: 2; padding-top: 1; color: #8b97a8; }
+Footer { background: #0c1016; color: #a5b2c3; }
+Footer > .footer--key { background: #233526; color: #c8ff79; }
+.compact #inspector { display: none; }
+.narrow #read-only { display: none; }
+.narrow .metric { padding: 1; }
+.narrow #probability { width: 16; }
+.narrow #sort { width: 14; }
+.short #intro { display: none; }
+.short #masthead { height: 2; padding-top: 0; }
+.short #metrics { height: 3; margin-bottom: 0; }
+.short .metric { height: 3; padding: 0 1; }
+.short #toolbar { margin: 0; }
+.short #list-heading { height: 1; border-bottom: none; }
+.short #status { height: 1; padding-top: 0; }
+ModalScreen { align: center middle; background: #05090ebd; }
+#detail-dialog, #rules-dialog, #probability-dialog { width: 66; max-width: 95%; height: auto; max-height: 92%; border: round #7edce5; background: #131c22; padding: 1 2; }
+#minimum-probability { margin-top: 1; }
+#detail-dialog { height: 90%; }
+#detail-dialog VerticalScroll { height: 1fr; padding: 1 0; }
+#close-detail { margin-top: 1; width: 100%; }
+.dialog-title { color: #c8ff79; text-style: bold; height: 2; }
+.muted { color: #8b97a8; height: auto; }
+#rule-fields { height: 1fr; min-height: 6; max-height: 24; margin-top: 1; }
+#rule-fields Label { height: 1; color: #9cabbc; }
+#rule-fields Input { margin-bottom: 0; }
+#rules-dialog { height: 37; }
+#rule-error, #probability-error { height: auto; max-height: 3; color: #ff8f9c; }
+.dialog-actions { height: 3; margin-top: 1; align: right middle; }
+.dialog-actions Button { margin-left: 1; width: 18; }

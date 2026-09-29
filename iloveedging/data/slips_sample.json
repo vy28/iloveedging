@@ -1,0 +1,99 @@
+{
+  "code": 200,
+  "message": "Synthetic sample shaped like api.startslips.com/app/feed/sports/open-pools. Not live betting data.",
+  "data": [
+    {
+      "header": "NFL",
+      "items": [
+        {
+          "drawing": {
+            "id": 900001,
+            "title": "Lions vs Bills",
+            "subtitle": "Thursday Night Football",
+            "sport": "NFL",
+            "drawing_at": "2026-09-18 00:15:00 +0000",
+            "is_live": false,
+            "is_complete": false,
+            "is_canceled": false,
+            "bet_market_name": "Win",
+            "market_type": { "label": "Win" },
+            "game": { "fee_percent": 0.05, "fee_min": 0.5 },
+            "share_link": "",
+            "number_types": [
+              { "id": 1, "title": "Detroit Lions", "bet_percentage": 42, "bet_amount": 420, "odds_to_win": 2.38 },
+              { "id": 2, "title": "Buffalo Bills", "bet_percentage": 58, "bet_amount": 580, "odds_to_win": 1.72 }
+            ]
+          }
+        },
+        {
+          "drawing": {
+            "id": 900002,
+            "title": "Vikings @ Bears",
+            "sport": "NFL",
+            "drawing_at": "2026-09-20 17:00:00 +0000",
+            "bet_market_name": "Moneyline",
+            "number_types": [
+              { "id": 3, "title": "Vikings", "bet_percentage": 31 },
+              { "id": 4, "title": "Bears", "bet_percentage": 69 }
+            ]
+          }
+        },
+        {
+          "drawing": {
+            "id": 900003,
+            "title": "Saints vs Ravens",
+            "sport": "NFL",
+            "drawing_at": "2026-09-20 17:00:00 +0000",
+            "bet_market_name": "Moneyline",
+            "number_types": [
+              { "id": 5, "title": "New Orleans Saints", "bet_percentage": 45 },
+              { "id": 6, "title": "Baltimore Ravens", "bet_percentage": 55 }
+            ]
+          }
+        },
+        {
+          "drawing": {
+            "id": 900004,
+            "title": "Bills -3.5 vs Lions",
+            "sport": "NFL",
+            "drawing_at": "2026-09-18 00:15:00 +0000",
+            "bet_market_name": "Spread",
+            "number_types": [
+              { "id": 7, "title": "Bills", "bet_percentage": 40, "spread": -3.5 },
+              { "id": 8, "title": "Lions", "bet_percentage": 60, "spread": 3.5 }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "header": "MLB",
+      "items": [
+        {
+          "drawing": {
+            "id": 900005,
+            "title": "Yankees vs Twins",
+            "sport": "MLB",
+            "drawing_at": "2026-09-15 23:40:00 +0000",
+            "bet_market_name": "Moneyline",
+            "number_types": [
+              { "id": 9, "title": "Yankees", "bet_percentage": 48 },
+              { "id": 10, "title": "Twins", "bet_percentage": 52 }
+            ]
+          }
+        },
+        {
+          "drawing": {
+            "id": 900006,
+            "title": "Who wins the office fantasy league?",
+            "sport": "",
+            "number_types": [
+              { "id": 11, "title": "Dave", "bet_percentage": 50 },
+              { "id": 12, "title": "Priya", "bet_percentage": 50 }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
