@@ -510,6 +510,8 @@ class EdgeTerminal(App):
         self.render_status()
 
     def show_selection(self) -> None:
+        if not self.is_running:
+            return
         self.query_one("#details", Static).update(detail_text(self.rows.get(self.selected_key), self.view == "unmatched"))
 
     def on_data_table_row_highlighted(self, event: DataTable.RowHighlighted) -> None:
@@ -518,6 +520,8 @@ class EdgeTerminal(App):
             self.show_selection()
 
     def on_data_table_row_selected(self, event: DataTable.RowSelected) -> None:
+        if not self.is_running:
+            return
         row = self.rows.get(event.row_key.value)
         if row:
             self.push_screen(DetailScreen(detail_text(row, self.view == "unmatched")))
@@ -557,7 +561,7 @@ class EdgeTerminal(App):
         self.push_screen(ProbabilityScreen(self.min_poly_probability), self.set_min_probability)
 
     def set_min_probability(self, minimum: float | None) -> None:
-        if minimum is None:
+        if minimum is None or not self.is_running:
             return
         self.min_poly_probability = minimum
         button = self.query_one("#probability", Button)

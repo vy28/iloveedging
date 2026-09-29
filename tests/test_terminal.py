@@ -144,6 +144,8 @@ class TerminalLifecycleTests(unittest.TestCase):
             self.assertFalse(app.is_running)
             app.render_status()
             app.render_data()
+            app.show_selection()
+            app.set_min_probability(.75)
             query.assert_not_called()
 
 
