@@ -3,7 +3,7 @@
 import copy
 import unittest
 from datetime import datetime, timedelta, timezone
-from unittest.mock import Mock, patch
+from unittest.mock import Mock, PropertyMock, patch
 
 import requests
 from textual.widgets import Button, DataTable, Input, Static
@@ -135,6 +135,16 @@ class BackendTests(unittest.TestCase):
         backend = LocalBackend(8787, 120)
         with patch.object(backend, "request", return_value={"ok": True}), self.assertRaises(BackendError):
             backend.fetch()
+
+
+class TerminalLifecycleTests(unittest.TestCase):
+    def test_refresh_callbacks_do_not_touch_widgets_during_shutdown(self):
+        app = EdgeTerminal(FakeBackend())
+        with patch.object(EdgeTerminal, "is_mounted", new_callable=PropertyMock, return_value=True), patch.object(app, "query_one") as query:
+            self.assertFalse(app.is_running)
+            app.render_status()
+            app.render_data()
+            query.assert_not_called()
 
 
 class TerminalTests(unittest.IsolatedAsyncioTestCase):

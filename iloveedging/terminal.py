@@ -394,7 +394,7 @@ class EdgeTerminal(App):
 
     @work(group="poll")
     async def refresh_data(self) -> None:
-        if self.polling:
+        if self.polling or not self.is_running:
             return
         self.polling = True
         try:
@@ -408,7 +408,7 @@ class EdgeTerminal(App):
         self.render_data()
 
     def render_status(self) -> None:
-        if not self.is_mounted:
+        if not self.is_mounted or not self.is_running:
             return
         if not self.has_polled:
             title, color = "◌ CONNECTING", CYAN
@@ -441,6 +441,8 @@ class EdgeTerminal(App):
         self.query_one("#status", Static).update(Text(message, style=color if color in (RED, AMBER) else MUTED))
 
     def render_data(self) -> None:
+        if not self.is_running:
+            return
         query = self.query_one("#search", Input).value
         rows = visible_rows(self.data, self.view, self.min_poly_probability, query, self.sort_field)
         picks = visible_rows(self.data, "opportunities", self.min_poly_probability, "", "ev")
